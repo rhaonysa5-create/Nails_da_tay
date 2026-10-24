@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Agendamento | Manicure [Nome]</title>
+<meta name="description" content="Escolha o serviço, a data e o horário.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="agendamento">
+<!-- Cabeçalho, rodapé, WhatsApp e lightbox são inseridos pelo app.js -->
+<main>
+<section class="top"><div class="wrap">
+  <div class="head"><h2>Agende seu horário</h2><p>Escolha o serviço, a data e o horário. Confirmo pelo WhatsApp em até 2 horas.</p></div>
+  <div class="bk">
+    <!-- Menu horizontal com fotos dos serviços -->
+    <div class="full">
+      <div class="sh"><label>Serviço</label><div class="sa"><button type="button" id="sp" aria-label="Rolar para a esquerda">&lsaquo;</button><button type="button" id="sx" aria-label="Rolar para a direita">&rsaquo;</button></div></div>
+      <div class="sm" id="sm"></div>
+      <p class="mu" id="sn">Toque em uma foto para escolher o serviço.</p>
+    </div>
+    <div>
+      <label>Data</label>
+      <div class="ch"><button type="button" id="pv" aria-label="Mês anterior">&lsaquo;</button><b id="cm"></b><button type="button" id="nx" aria-label="Próximo mês">&rsaquo;</button></div>
+      <div class="cg" id="cg"></div>
+    </div>
+    <div>
+      <label>Horário</label><div class="times" id="tm"></div>
+      <form id="bf" novalidate>
+        <label for="nm">Nome</label><input id="nm" autocomplete="name" placeholder="Seu nome completo">
+        <label for="ph">Telefone (WhatsApp)</label><input id="ph" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 99999-9999">
+        <label for="ob">Observações</label><textarea id="ob" rows="3" placeholder="Cor preferida, referências, alergias a produtos"></textarea>
+        <p class="hint">Informe só o necessário. Avisar sobre alergias ajuda a garantir sua segurança.</p>
+        <label class="chk"><input type="checkbox" id="ac" required><span>Li e concordo com os <a href="termos.html" target="_blank" rel="noopener">Termos de Uso</a> e a <a href="privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a>, e autorizo o uso das informações acima, inclusive alergias que eu informar, apenas para contato e atendimento.</span></label>
+        <p class="er" id="bm" role="alert"></p>
+        <button class="btn" type="submit">Confirmar agendamento</button>
+      </form>
+      <div class="ok" id="ok" hidden></div>
+    </div>
+  </div>
+</div></section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
